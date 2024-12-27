@@ -1,0 +1,302 @@
+:root {
+  --boston-azul-50: #f1f7fa;
+  --boston-azul-100: #dcebf1;
+  --boston-azul-200: #bcd7e5;
+  --boston-azul-300: #8eb9d2;
+  --boston-azul-400: #5792b7;
+  --boston-azul-500: #3d779d;
+  --boston-azul-600: #356185;
+  --boston-azul-700: #31516d;
+  --boston-azul-700-transparent: #31516d62;
+  --boston-azul-800: #2f465b;
+  --boston-azul-900: #2b3c4e;
+  --boston-azul-950: #182534;
+}
+.MyBody {
+  display: flex;
+  flex-direction: column; /* Header, Main, Footer en columna */
+  min-height: 100vh; /* Asegura que ocupe toda la altura del viewport */
+}
+
+* {
+  scrollbar-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.MyNabar {
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--boston-azul-600);
+  padding: 25px;
+  .MyTitle {
+    justify-content: end;
+    color: var(--boston-azul-200);
+    margin: auto;
+  }
+}
+
+.MyMenu {
+  position: absolute;
+  right: 2%;
+  .MyList {
+    display: flex;
+    list-style: none;
+    li {
+      position: relative;
+      margin: 10px;
+
+      .MySubmenu {
+        display: none;
+        position: absolute;
+        width: max-content;
+        text-align: left;
+        top: 100%;
+        left: 0;
+        background-color: var(--boston-azul-500);
+        border-bottom-right-radius: 10px;
+
+        li:hover {
+          transform: scale(1.1);
+          transition: all 0.1s ease-in-out;
+          background-color: var(--boston-azul-700);
+          border-bottom-right-radius: 10px;
+        }
+
+        li {
+          border-left: 2px solid var(--boston-azul-100);
+          width: 100%;
+          list-style: none;
+          position: relative;
+
+          padding: 7px;
+          transition: all 0.4s ease-in-out;
+          a {
+            color: var(--boston-azul-200);
+            transition: all 0.1s ease-in-out;
+          }
+          a:hover {
+            color: var(--boston-azul-100);
+            transition: all 0.1s ease-in-out;
+          }
+        }
+      }
+    }
+
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      color: var(--boston-azul-200);
+    }
+  }
+}
+
+.MyMenu .MyList li:hover .MySubmenu {
+  display: block;
+}
+
+.MyTitleContent {
+  display: flex;
+  position: absolute;
+  left: 0;
+  gap: 10px;
+  .Mylogo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background-color: var(--boston-azul-200);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3ms ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.MyMain {
+  flex: 1; /* Expande para ocupar el espacio disponible */
+  padding: 20px; /* Agrega relleno si es necesario */
+  background-color: var(--boston-azul-50); /* Color de fondo */
+}
+
+.Titulo {
+  color: var(--boston-azul-200);
+  position: relative;
+}
+
+.Titulo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0px;
+  height: 100%;
+  background-color: var(--boston-azul-700-transparent);
+  transition: width 0.3s ease-in-out;
+}
+
+.Titulo:hover::before {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.MyFooter {
+  width: 100%;
+  margin-top: auto; /* Empuja el footer al final */
+  display: flex;
+  justify-content: center;
+  background-color: var(--boston-azul-500);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px;
+
+  a {
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .MyRedes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.MySection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.MyMisionAndMyvision {
+  margin: auto;
+  background-color: var(--boston-azul-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+.MyMV {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.MyMision {
+  color: var(--boston-azul-500);
+  border-right: 2px solid var(--boston-azul-500);
+}
+
+.MyVision {
+  color: var(--boston-azul-00);
+}
+
+.SubTitulo {
+  color: var(--boston-azul-500);
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.SubTitulo::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background-color: var(--boston-azul-500);
+  bottom: 0;
+  left: 0;
+  transition: all 0.3ms ease-in-out;
+}
+
+.SubTitulo:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.namepage {
+  color: var(--boston-azul-500);
+  text-align: center;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.namepage:hover {
+  color: var(--boston-azul-600);
+  scale: 1.1;
+}
+
+.footerMenu {
+  padding: 10px; /* Relleno interno */
+  text-align: center; /* Centrar texto */
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: var(--boston-azul-100);
+    }
+  }
+}
+
+.MyInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  article {
+    display: flex;
+    gap: 20px;
+
+    p {
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+      width: 50%;
+      color: var(--boston-azul-500);
+    }
+  }
+}
