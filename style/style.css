@@ -43,6 +43,46 @@
   }
 }
 
+.ContenedorA {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+  width: 200px;
+
+  .MyBox {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--boston-azul-200);
+    animation: Agrandar 0.5s ease-in-out infinite;
+  }
+
+  .MyBox:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .MyBox:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .MyBox:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+}
+
+@keyframes Agrandar {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 .MyMenu {
   position: absolute;
   right: 2%;
@@ -289,13 +329,14 @@ a:hover::after {
 
   article {
     display: flex;
-    gap: 20px;
+    gap: 2px;
 
     p {
       text-align: center;
       padding: 10px;
       margin: 10px;
-      width: 50%;
+      width: 580px;
+      height: 325px;
       color: var(--boston-azul-500);
     }
   }
