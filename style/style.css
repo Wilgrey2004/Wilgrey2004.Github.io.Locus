@@ -244,8 +244,10 @@ a:hover::after {
 
   .Galeria {
     display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes bajen a una nueva fila */
     justify-content: center;
     align-items: center;
+    gap: 20px; /* Espaciado entre las imágenes */
 
     .ImageCarrucel {
       display: flex;
@@ -472,7 +474,7 @@ a:hover::after {
   display: flex;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1089px) {
   .MenuShow {
     display: block;
   }
@@ -555,7 +557,14 @@ a:hover::after {
     flex-direction: column; /* Ajusta elementos en columna */
     align-items: center;
   }
+  .Galeria {
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten */
+  }
 
+  .ImageCarrucel {
+    width: calc(50% - 20px); /* Cada imagen ocupa el 50% menos el gap */
+    height: auto; /* Permite que se ajusten proporcionalmente */
+  }
   .MyMain .MySection .MyInfo article .MyText {
     font-size: 14px; /* Ajusta el tamaño del texto */
     width: 70vw; /* Usa el ancho completo */
