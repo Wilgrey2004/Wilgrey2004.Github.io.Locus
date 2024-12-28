@@ -1,16 +1,16 @@
 :root {
-  --boston-azul-50: #f1f7fa;
-  --boston-azul-100: #dcebf1;
-  --boston-azul-200: #bcd7e5;
-  --boston-azul-300: #8eb9d2;
-  --boston-azul-400: #5792b7;
-  --boston-azul-500: #3d779d;
-  --boston-azul-600: #356185;
-  --boston-azul-700: #31516d;
-  --boston-azul-700-transparent: #31516d62;
-  --boston-azul-800: #2f465b;
-  --boston-azul-900: #2b3c4e;
-  --boston-azul-950: #182534;
+  --boston-50: #f1f7fa;
+  --boston-100: #dcebf1;
+  --boston-200: #bcd7e5;
+  --boston-300: #8eb9d2;
+  --boston-400: #5792b7;
+  --boston-500: #3d779d;
+  --boston-600: #356185;
+  --boston-700: #31516d;
+  --boston-700-transparent: #31516d62;
+  --boston-800: #2f465b;
+  --boston-900: #2b3c4e;
+  --boston-950: #182534;
 }
 .MyBody {
   display: flex;
@@ -34,11 +34,12 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  background-color: var(--boston-azul-600);
+  background-color: var(--boston-600);
   padding: 25px;
+
   .MyTitle {
     justify-content: end;
-    color: var(--boston-azul-200);
+    color: var(--boston-200);
     margin: auto;
   }
 }
@@ -54,7 +55,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--boston-azul-200);
+    background-color: var(--boston-200);
     animation: Agrandar 0.5s ease-in-out infinite;
   }
 
@@ -100,18 +101,19 @@
         text-align: left;
         top: 100%;
         left: 0;
-        background-color: var(--boston-azul-500);
+        background-color: var(--boston-500);
         border-bottom-right-radius: 10px;
+        transition: all 0.2s ease-in-out;
 
         li:hover {
           transform: scale(1.1);
           transition: all 0.1s ease-in-out;
-          background-color: var(--boston-azul-700);
+          background-color: var(--boston-700);
           border-bottom-right-radius: 10px;
         }
 
         li {
-          border-left: 2px solid var(--boston-azul-100);
+          border-left: 2px solid var(--boston-100);
           width: 100%;
           list-style: none;
           position: relative;
@@ -119,11 +121,11 @@
           padding: 7px;
           transition: all 0.4s ease-in-out;
           a {
-            color: var(--boston-azul-200);
+            color: var(--boston-200);
             transition: all 0.1s ease-in-out;
           }
           a:hover {
-            color: var(--boston-azul-100);
+            color: var(--boston-100);
             transition: all 0.1s ease-in-out;
           }
         }
@@ -133,13 +135,14 @@
     a {
       font-size: 18px;
       text-decoration: none;
-      color: var(--boston-azul-200);
+      color: var(--boston-200);
     }
   }
 }
 
 .MyMenu .MyList li:hover .MySubmenu {
   display: block;
+  transition: all 0.4s ease-in-out;
 }
 
 .MyTitleContent {
@@ -162,7 +165,7 @@ a::after {
   position: absolute;
   width: 0px;
   height: 2px;
-  background-color: var(--boston-azul-200);
+  background-color: var(--boston-200);
   bottom: 0;
   left: 0;
   transition: all 0.3ms ease-in-out;
@@ -176,36 +179,58 @@ a:hover::after {
 .MyMain {
   flex: 1; /* Expande para ocupar el espacio disponible */
   padding: 20px; /* Agrega relleno si es necesario */
-  background-color: var(--boston-azul-50); /* Color de fondo */
+  background-color: var(--boston-50); /* Color de fondo */
 }
 
 .Titulo {
-  color: var(--boston-azul-200);
+  color: var(--boston-200);
   position: relative;
+  animation: TituloAnimado 2s alternate ease infinite paused;
 }
 
-.Titulo::before {
+.Titulo:hover {
+  animation-play-state: running;
+}
+
+@keyframes TituloAnimado {
+  0% {
+    transform: scale(1);
+    color: var(--boston-200);
+  }
+  50% {
+    transform: scale(1.1);
+    color: var(--boston-300);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* .Titulo::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 0px;
   height: 100%;
-  background-color: var(--boston-azul-700-transparent);
+  background-color: var(--boston-700-transparent);
   transition: width 0.3s ease-in-out;
 }
 
 .Titulo:hover::before {
   width: 100%;
   transition: width 0.3s ease-in-out;
-}
+} */
 
 .MyFooter {
   width: 100%;
   margin-top: auto; /* Empuja el footer al final */
   display: flex;
   justify-content: center;
-  background-color: var(--boston-azul-500);
+  background-color: var(--boston-500);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 10px;
@@ -231,113 +256,162 @@ a:hover::after {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
-.MyMisionAndMyvision {
-  margin: auto;
-  background-color: var(--boston-azul-200);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  p {
-    text-align: center;
-    padding: 10px;
-    margin: 10px;
+  .Galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ImageCarrucel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 200px;
+      background-image: url("../img/GrisBG.png");
+      border-radius: 5px;
+      margin: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .ImageCarrucel:hover {
+      width: 300px;
+      box-shadow: 2px 1px 1px 2px var(--boston-700-transparent);
+      transform: translateY(-10px);
+    }
   }
-}
 
-.MyMV {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .ImageCarrucel p {
+    text-align: center;
+    color: var(--boston-100);
+    display: none;
+    transition: display 0.3s ease;
+  }
 
-.MyMision {
-  color: var(--boston-azul-500);
-  border-right: 2px solid var(--boston-azul-500);
-}
+  .ImageCarrucel:hover p {
+    display: block;
+  }
 
-.MyVision {
-  color: var(--boston-azul-00);
-}
+  .MyMisionAndMyvision {
+    margin: auto;
+    background-color: var(--boston-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    .MyBox {
+      position: absolute;
+      top: 3px;
+      right: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--boston-700);
+      animation: Agrandar 0.5s ease-in-out infinite;
+    }
+    p {
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+    }
+  }
 
-.SubTitulo {
-  color: var(--boston-azul-500);
-  width: max-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  text-align: center;
-  position: relative;
-}
+  .MyMV {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.SubTitulo::after {
-  content: "";
-  position: absolute;
-  width: 0px;
-  height: 2px;
-  background-color: var(--boston-azul-500);
-  bottom: 0;
-  left: 0;
-  transition: all 0.3ms ease-in-out;
-}
+    h2 {
+      margin: 10px;
+    }
+  }
 
-.SubTitulo:hover::after {
-  width: 100%;
-  transition: width 0.3s ease-in-out;
-}
+  .MyMision {
+    color: var(--boston-500);
+    border-right: 2px solid var(--boston-500);
+  }
 
-.namepage {
-  color: var(--boston-azul-500);
-  text-align: center;
-  margin: 5px;
-  transition: all 0.3s ease-in-out;
-}
+  .MyVision {
+    color: var(--boston-00);
+    border-left: 2px solid var(--boston-500);
+  }
 
-.namepage:hover {
-  color: var(--boston-azul-600);
-  scale: 1.1;
-}
+  .SubTitulo {
+    color: var(--boston-500);
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    position: relative;
+  }
 
-.footerMenu {
-  padding: 10px; /* Relleno interno */
-  text-align: center; /* Centrar texto */
+  .SubTitulo::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: var(--boston-500);
+    bottom: 0;
+    left: 0;
+    transition: all 0.3ms ease-in-out;
+  }
+
+  .SubTitulo:hover::after {
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .namepage {
+    color: var(--boston-500);
+    text-align: center;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .namepage:hover {
+    color: var(--boston-600);
+    scale: 1.1;
+  }
+
+  /* /* /* .footerMenu {
+    padding: 10px; 
+  text-align: center; /
   display: flex;
   gap: 10px;
   font-size: 16px;
   justify-content: center;
   align-items: center;
   padding: 10px;
+  */
+  /*  } */
 
-  li {
+  /* .MyCopy .footerMenu li {
     list-style: none;
-    a {
-      text-decoration: none;
-      color: var(--boston-azul-100);
-    }
-  }
-}
-
-.MyInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-
-  article {
+  } */
+  */ .MyInfo {
     display: flex;
-    gap: 2px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 
-    p {
-      text-align: center;
-      padding: 10px;
-      margin: 10px;
-      width: 580px;
-      height: 325px;
-      color: var(--boston-azul-500);
+    article {
+      display: flex;
+      gap: 2px;
+
+      p {
+        text-align: center;
+        padding: 10px;
+        margin: 10px;
+        width: 580px;
+        height: 325px;
+        color: var(--boston-500);
+      }
     }
   }
 }
