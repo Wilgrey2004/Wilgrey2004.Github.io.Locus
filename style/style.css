@@ -361,7 +361,7 @@ a:hover::after {
     color: var(--boston-600);
     scale: 1.1;
   }
-  
+
   .MyInfo {
     display: flex;
     flex-direction: column;
@@ -370,7 +370,7 @@ a:hover::after {
     width: 90vw;
     background-color: var(--boston-200);
     margin: 20px;
-    
+
     .namepage {
       color: var(--boston-500);
       text-align: center;
@@ -427,7 +427,7 @@ a:hover::after {
   width: min-content;
   height: min-content;
   top: 50px;
-  right: 0;
+  right: -50px;
   background-color: white;
   border: 1px solid var(--boston-400);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -451,9 +451,10 @@ a:hover::after {
       background-color: var(--boston-200);
       display: none;
       position: absolute;
-      left: -200px;
+      left: -60px;
       border: solid 2px var(--boston-400);
-      top: 60px;
+      top: 100px;
+      z-index: 1000;
       list-style: none;
     }
   }

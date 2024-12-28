@@ -1,5 +1,4 @@
 //Mostrar modal
-
 const ShowMenuModa = document.getElementById("MenuShowB");
 const MyModal = document.getElementById("MyModal");
 const SubMenuShow = document.getElementById("SubMenuShow");
@@ -24,3 +23,4 @@ SubMenuShow.addEventListener("click", () => {
     MySubmenuModal.style.display = "flex";
   }
 });
+//Mostrar modal
