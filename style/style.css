@@ -14,8 +14,8 @@
 }
 .MyBody {
   display: flex;
-  flex-direction: column; /* Header, Main, Footer en columna */
-  min-height: 100vh; /* Asegura que ocupe toda la altura del viewport */
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 * {
@@ -27,11 +27,10 @@
 }
 
 .MyNabar {
-  width: 100%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  width: 100vw;
+
   display: flex;
-  position: relative;
+  /* position: relative; */
   justify-content: center;
   align-items: center;
   background-color: var(--boston-600);
@@ -86,7 +85,8 @@
 
 .MyMenu {
   position: absolute;
-  right: 2%;
+  right: 4vh;
+
   .MyList {
     display: flex;
     list-style: none;
@@ -148,7 +148,7 @@
 .MyTitleContent {
   display: flex;
   position: absolute;
-  left: 0;
+  left: 8vh;
   gap: 10px;
   .Mylogo {
     width: 50px;
@@ -180,6 +180,7 @@ a:hover::after {
   flex: 1; /* Expande para ocupar el espacio disponible */
   padding: 20px; /* Agrega relleno si es necesario */
   background-color: var(--boston-50); /* Color de fondo */
+  width: 100vw;
 }
 
 .Titulo {
@@ -293,6 +294,7 @@ a:hover::after {
   }
 
   .MyMisionAndMyvision {
+    width: 90vw;
     margin: auto;
     background-color: var(--boston-200);
     display: flex;
@@ -331,12 +333,10 @@ a:hover::after {
 
   .MyMision {
     color: var(--boston-500);
-    border-right: 2px solid var(--boston-500);
   }
 
   .MyVision {
-    color: var(--boston-00);
-    border-left: 2px solid var(--boston-500);
+    color: var(--boston-600);
   }
 
   .SubTitulo {
@@ -393,25 +393,100 @@ a:hover::after {
   /* .MyCopy .footerMenu li {
     list-style: none;
   } */
-  */ .MyInfo {
+
+  .MyInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 90vw;
+    background-color: var(--boston-200);
+    margin: 20px;
+    .namepage {
+      color: var(--boston-500);
+      text-align: center;
+      margin: 10px;
+    }
 
     article {
       display: flex;
       gap: 2px;
-
+      justify-items: center;
+      align-items: center;
+      margin: 20px;
+      div {
+        iframe {
+          border-top-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+      }
       p {
         text-align: center;
         padding: 10px;
         margin: 10px;
         width: 580px;
-        height: 325px;
-        color: var(--boston-500);
+        color: var(--boston-700);
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .MyFooter {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .MyFooter .MyRedes {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .MyFooter a img {
+    width: 40px; /* Ajusta el tamaño de los íconos */
+    height: 40px;
+  }
+
+  .MyMain {
+    padding: 5px; /* Minimiza el relleno para aprovechar el espacio */
+  }
+
+  .MySection .namepage {
+    font-size: 18px; /* Reduce el tamaño de texto */
+  }
+
+  .MyInfo article {
+    flex-direction: column; /* Ajusta elementos en columna */
+    align-items: center;
+  }
+
+  .MyInfo p {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    width: 100%; /* Usa el ancho completo */
+  }
+
+  .MyMisionAndMyvision {
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+    background-color: var(--boston-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    .MyBox {
+      position: absolute;
+      top: 3px;
+      right: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--boston-700);
     }
   }
 }
