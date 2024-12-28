@@ -30,7 +30,7 @@
   width: 100vw;
 
   display: flex;
-  /* position: relative; */
+  position: relative;
   justify-content: center;
   align-items: center;
   background-color: var(--boston-600);
@@ -210,22 +210,6 @@ a:hover::after {
   }
 }
 
-/* .Titulo::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0px;
-  height: 100%;
-  background-color: var(--boston-700-transparent);
-  transition: width 0.3s ease-in-out;
-}
-
-.Titulo:hover::before {
-  width: 100%;
-  transition: width 0.3s ease-in-out;
-} */
-
 .MyFooter {
   width: 100%;
   margin-top: auto; /* Empuja el footer al final */
@@ -377,23 +361,7 @@ a:hover::after {
     color: var(--boston-600);
     scale: 1.1;
   }
-
-  /* /* /* .footerMenu {
-    padding: 10px; 
-  text-align: center; /
-  display: flex;
-  gap: 10px;
-  font-size: 16px;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  */
-  /*  } */
-
-  /* .MyCopy .footerMenu li {
-    list-style: none;
-  } */
-
+  
   .MyInfo {
     display: flex;
     flex-direction: column;
@@ -402,6 +370,7 @@ a:hover::after {
     width: 90vw;
     background-color: var(--boston-200);
     margin: 20px;
+    
     .namepage {
       color: var(--boston-500);
       text-align: center;
@@ -431,7 +400,128 @@ a:hover::after {
   }
 }
 
+.MenuShow {
+  width: 100px;
+  display: none;
+  position: relative;
+  padding: 10px;
+  background-color: var(--boston-700);
+  border-radius: 30px;
+  font-size: 17px;
+  border: none;
+  color: var(--boston-200);
+  transition: all 0.3s ease-in-out;
+}
+
+.MenuShow:hover {
+  background-color: var(--boston-400);
+}
+
+.MenuShow:focus .MyModal {
+  display: block;
+}
+
+.MyModal {
+  display: none; /* Ocultar el modal inicialmente */
+  position: absolute;
+  width: min-content;
+  height: min-content;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid var(--boston-400);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.MyListModal {
+  display: none;
+  width: max-content;
+  list-style: none;
+  padding: 20px;
+  li {
+    a {
+      text-decoration: none;
+      color: var(--boston-400);
+    }
+    .MySubmenuModal {
+      width: max-content;
+      padding: 30px;
+      background-color: var(--boston-200);
+      display: none;
+      position: absolute;
+      left: -200px;
+      border: solid 2px var(--boston-400);
+      top: 60px;
+      list-style: none;
+    }
+  }
+}
+
+.MyListModal:nth-child(2) {
+  position: relative;
+}
+
+.Activo {
+  display: block;
+}
+
+.ActivoFlex {
+  display: flex;
+}
+
 @media screen and (max-width: 768px) {
+  .MenuShow {
+    display: block;
+  }
+  .MyModal {
+    display: none;
+    .MyListModal {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      li {
+        .SubMenuShow {
+          border: solid 1px var(--boston-400);
+          border-radius: 10px;
+          padding: 5px;
+          background: none;
+          color: var(--boston-400);
+          font-size: 17px;
+          cursor: pointer;
+        }
+        .MySubmenuModal {
+          margin-top: 10px;
+          display: none;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    }
+  }
+  .MyNabar {
+    .MyMenu {
+      .MyList {
+        display: none;
+      }
+    }
+    .MyTitleContent {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .Titulo {
+        font-size: 20px;
+      }
+
+      .ContenedorA {
+        display: none;
+      }
+    }
+  }
+
   .MyFooter {
     flex-direction: column;
     align-items: center;
@@ -454,7 +544,10 @@ a:hover::after {
   }
 
   .MySection .namepage {
-    font-size: 18px; /* Reduce el tamaño de texto */
+    font-size: 14px; /* Reduce el tamaño de texto */
+  }
+  .MyInfo div iframe {
+    width: 50vw;
   }
 
   .MyInfo article {
@@ -462,9 +555,13 @@ a:hover::after {
     align-items: center;
   }
 
-  .MyInfo p {
+  .MyMain .MySection .MyInfo article .MyText {
     font-size: 14px; /* Ajusta el tamaño del texto */
-    width: 100%; /* Usa el ancho completo */
+    width: 70vw; /* Usa el ancho completo */
+    color: var(--boston-50);
+    background: rgba(0, 0, 0, 0.192);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .MyMisionAndMyvision {
