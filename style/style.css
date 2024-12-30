@@ -462,6 +462,67 @@ a:hover::after {
   }
 }
 
+.MyInfo::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 5px;
+  background-color: var(--boston-500);
+  top: 150px;
+  right: -100px;
+  transition: all 0.3ms ease-in-out;
+  transform: rotate(90deg);
+}
+
+.MyInfo::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 5px;
+  background-color: var(--boston-500);
+  top: 120px;
+  right: -90px;
+  transition: all 0.3ms ease-in-out;
+  transform: rotate(90deg);
+}
+/* .MyInfo:hover::after {
+  
+  
+} */
+
+.MyInfo {
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  position: relative;
+  article {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .MyText {
+        list-style: none;
+        padding: 10px;
+        margin: 10px;
+        font-size: 17px;
+        width: 580px;
+        color: white;
+        background: rgba(0, 0, 0, 0.192);
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: all 0.2s ease;
+      }
+      .MyText:hover {
+        font-size: 20px;
+        border: solid 1px var(--boston-600);
+        margin: 10px;
+        transform: translateY(-10px) scale(1.05);
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
 .MyListModal:nth-child(2) {
   position: relative;
 }
@@ -565,7 +626,10 @@ a:hover::after {
     width: calc(50% - 20px); /* Cada imagen ocupa el 50% menos el gap */
     height: auto; /* Permite que se ajusten proporcionalmente */
   }
+
   .MyMain .MySection .MyInfo article .MyText {
+    padding: 10px;
+    margin: 10px;
     font-size: 14px; /* Ajusta el tamaño del texto */
     width: 70vw; /* Usa el ancho completo */
     color: var(--boston-50);
