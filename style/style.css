@@ -626,6 +626,10 @@ a:hover::after {
     width: calc(50% - 20px); /* Cada imagen ocupa el 50% menos el gap */
     height: auto; /* Permite que se ajusten proporcionalmente */
   }
+  .MyMain .MySection .MyInfo {
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
 
   .MyMain .MySection .MyInfo article .MyText {
     padding: 10px;
