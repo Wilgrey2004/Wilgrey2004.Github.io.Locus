@@ -25,7 +25,18 @@
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+.MyTopHeader {
+  width: 100vw;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--boston-600);
 
+  .Mylogo {
+    width: 100px;
+  }
+}
 .MyNabar {
   width: 100vw;
 
@@ -179,7 +190,7 @@ a:hover::after {
 .MyMain {
   flex: 1; /* Expande para ocupar el espacio disponible */
   padding: 20px; /* Agrega relleno si es necesario */
-  background-color: var(--boston-50); /* Color de fondo */
+  background-color: var(--boston-100); /* Color de fondo */
   width: 100vw;
 }
 
@@ -252,10 +263,13 @@ a:hover::after {
     .ImageCarrucel {
       display: flex;
       justify-content: center;
+      justify-items: center;
       align-items: center;
-      width: 150px;
+      width: 220px;
       height: 200px;
-      background-image: url("../img/GrisBG.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       border-radius: 5px;
       margin: 10px;
       transition: all 0.3s ease-in-out;
@@ -266,9 +280,26 @@ a:hover::after {
       box-shadow: 2px 1px 1px 2px var(--boston-700-transparent);
       transform: translateY(-10px);
     }
+    .ImageCarrucel:nth-child(1) {
+      background-image: url("../img/PlanSolucion.jpg");
+    }
+    .ImageCarrucel:nth-child(2) {
+      background-image: url("../img/PlanTranuilidad.jpg");
+    }
+    .ImageCarrucel:nth-child(3) {
+      background-image: url("../img/PlanSatisfaccion.jpg");
+    }
+
+    .ImageCarrucel a {
+      text-decoration: none;
+    }
   }
 
   .ImageCarrucel p {
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 5px;
+    padding: 10px;
     text-align: center;
     color: var(--boston-100);
     display: none;
@@ -276,6 +307,7 @@ a:hover::after {
   }
 
   .ImageCarrucel:hover p {
+    transition: all 0.3s ease-in-out;
     display: block;
   }
 
@@ -435,6 +467,8 @@ a:hover::after {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 30px;
 }
 
 .MyListModal {
@@ -445,12 +479,13 @@ a:hover::after {
   li {
     a {
       text-decoration: none;
+      font-size: large;
       color: var(--boston-400);
     }
     .MySubmenuModal {
       width: max-content;
       padding: 30px;
-      background-color: var(--boston-200);
+      background-color: var(--boston-100);
       display: none;
       position: absolute;
       left: -60px;
@@ -458,6 +493,31 @@ a:hover::after {
       top: 100px;
       z-index: 1000;
       list-style: none;
+      border-top-left-radius: 30px;
+    }
+    .MySubmenuModal li {
+      width: max-content;
+
+      transition: all 0.3s ease-in-out;
+    }
+    .MySubmenuModal li:hover {
+      transition: all 0.3s ease-in-out;
+      border-bottom-right-radius: 20px;
+      border-left: solid 2px var(--boston-400);
+      width: max-content;
+      transform: translate(-10px);
+      padding: 10px;
+      background-color: var(--boston-600);
+    }
+
+    .MySubmenuModal li:hover a {
+      color: var(--boston-200);
+    }
+    .MySubmenuModal li {
+      a {
+        text-decoration: none;
+        font-size: large;
+      }
     }
   }
 }
@@ -530,12 +590,11 @@ a:hover::after {
   align-items: center;
   gap: 10px;
   margin: 20px;
-  .namepage{
+  .namepage {
     color: var(--boston-500);
     font-size: 30px;
   }
 }
-
 
 .MyListModal:nth-child(2) {
   position: relative;
@@ -552,6 +611,7 @@ a:hover::after {
 @media screen and (max-width: 1089px) {
   .MenuShow {
     display: block;
+    transition: all 0.3s ease-in-out;
   }
   .MyModal {
     display: none;
