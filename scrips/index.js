@@ -24,3 +24,15 @@ SubMenuShow.addEventListener("click", () => {
   }
 });
 //Mostrar modal
+
+//BTN Planes
+const btnPLanesAccion = document.getElementById("MyButtonAdquirir");
+const ValorOfBtn = btnPLanesAccion.value;
+
+btnPLanesAccion.addEventListener("click", () => {
+  const mensaje = encodeURIComponent(
+    `Estoy interesado en el plan: ${ValorOfBtn}`
+  );
+  window.location.href = `https://wa.me/18293774584?text=${mensaje}`;
+  console.log(ValorOfBtn);
+});

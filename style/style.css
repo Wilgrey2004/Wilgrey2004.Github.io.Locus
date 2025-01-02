@@ -33,11 +33,26 @@
   justify-content: center;
   align-items: center;
   background-color: var(--boston-600);
-
+  transition: all 0.3s ease-in-out;
   .Mylogo {
+    margin-top: 10px;
     width: 100px;
   }
 }
+
+.TextMyLogo {
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+  transform: translateY(-10px);
+  h1 {
+    color: var(--boston-400);
+  }
+  p {
+    color: var(--boston-200);
+  }
+}
+
 .MyNabar {
   width: 100vw;
 
@@ -241,9 +256,30 @@ a:hover::after {
 
   .MyRedes {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.ContentMyRedesIcons {
+  display: flex;
+
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImageTextRedes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--boston-200);
+  img {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -608,8 +644,90 @@ a:hover::after {
 .ActivoFlex {
   display: flex;
 }
+/* Plan seccions */
+
+.MyNamePlan {
+  color: var(--boston-500);
+  text-align: center;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.MyButtonAdquirir {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--boston-600);
+  color: var(--boston-200);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.MyButtonAdquirir:hover {
+  background-color: var(--boston-500);
+  translate: 0px -5px;
+  color: var(--boston-100);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 
 @media screen and (max-width: 1089px) {
+  /* Planes seccions */
+  .MySectionPlanes {
+    background-color: var(--boston-200);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .MyPlanInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 90vw;
+    height: min-content;
+
+    .MyNamePlan {
+      font-size: 20px;
+    }
+
+    .MyPlan {
+      ul {
+        font-size: 15px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        li {
+          color: var(--boston-400);
+          list-style: none;
+        }
+        .MyEspecial {
+          color: var(--boston-500);
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  .logoPlan {
+    margin: auto;
+    background-image: url(../img/PlanSatisfaccion.jpg);
+    height: 200px;
+    width: 90vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  /* plan secction */
   .MenuShow {
     display: block;
     transition: all 0.3s ease-in-out;
