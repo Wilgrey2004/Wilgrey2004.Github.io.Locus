@@ -31,7 +31,7 @@ const ValorOfBtn = btnPLanesAccion.value;
 
 btnPLanesAccion.addEventListener("click", () => {
   const mensaje = encodeURIComponent(
-    `Estoy interesado en el plan: ${ValorOfBtn}`
+    `Estoy interesado en el Plan ${ValorOfBtn}`
   );
   window.location.href = `https://wa.me/18293774584?text=${mensaje}`;
   console.log(ValorOfBtn);

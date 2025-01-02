@@ -1,12 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
+    <link rel="icon" href="../img/logo1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../style/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/style.css" />
-    <title>Document</title>
+
+    <title>Plan Familiar Satisfacción</title>
   </head>
-  <body>
-    Plan Familiar Tranquilidad
+  <body class="MyBody">
+    <header class="MyTopHeader">
+      <img src="../img/logo1.png" alt="logo de la pagina" class="Mylogo" />
+      <div class="TextMyLogo">
+        <h1>LOGUZ</h1>
+        <p>Planes Funerarios</p>
+        <p>Tu Mano Amiga en los momentos dificiles</p>
+      </div>
+    </header>
+
+    <nav class="MyNabar">
+      <div class="MyTitleContent">
+        <h1 class="Titulo">LOGUZ</h1>
+        <div class="ContenedorA">
+          <div class="MyBox"></div>
+          <div class="MyBox"></div>
+          <div class="MyBox"></div>
+        </div>
+      </div>
+
+      <div class="MyMenu">
+        <button class="MenuShow" id="MenuShowB">Menu</button>
+        <div class="MyModal" id="MyModal">
+          <ul class="MyListModal">
+            <li><a href="../index.html">Inicio</a></li>
+            <li>
+              <button class="SubMenuShow" id="SubMenuShow">↓Planes</button>
+              <ul class="MySubmenuModal" id="MySubmenuModal">
+                <li class="">
+                  <a href="../Planes/PlanSolucion.html"
+                    >Plan Familiar Solución</a
+                  >
+                </li>
+                <li class="">
+                  <a href="../Planes/PlanTranquilidad.html"
+                    >Plan Familiar Tranquilidad</a
+                  >
+                </li>
+                <li class="">
+                  <a href="../Planes/PlanSatisfaccion.html"
+                    >Plan Familiar Satisfacción
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="AcercaDeNosotros.html">Acerca de nosotros</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <ul class="MyList">
+          <li><a href="../index.html">Inicio</a></li>
+          <li>
+            <a href="Servicios.html">Planes ↓</a>
+            <ul class="MySubmenu">
+              <li class="">
+                <a href="../Planes/PlanSolucion.html">Plan Familiar Solución</a>
+              </li>
+              <li class="">
+                <a href="../Planes/PlanTranquilidad.html"
+                  >Plan Familiar Tranquilidad</a
+                >
+              </li>
+              <li class="">
+                <a href="../Planes/PlanSatisfaccion.html"
+                  >Plan Familiar Satisfacción
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="AcercaDeNosotros.html">Acerca de nosotros</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="MyMain">
+      <section class="MySectionPlanes">
+        <div
+          class="logoPlan"
+          style="background-image: url(../img/PlanTranuilidad.jpg)"
+        ></div>
+        <div class="MyPlanInfo">
+          <h2 class="MyNamePlan">Plan Familiar Satisfacción</h2>
+          <div class="MyPlan">
+            <ul>
+              <li>Traslado de cadáver Santo Domingo-San Cristóbal.</li>
+              <li>Entierro.</li>
+              <li>Ataúd tipo: Sarcófago Sencillo (6 pies).</li>
+              <li>
+                Equipo velatorio para casa: Candelabro, cortinas, carrete.
+              </li>
+              <li>Ceremonia de flores en nombre de la familia.</li>
+              <li>
+                Equipo para servicio de refrigerio: Telmo, bandeja y cafetera.
+              </li>
+              <li>10 botellones de agua.</li>
+              <li>Carpa y lona durante velatorio y último rezo.</li>
+              <li>
+                125 sillas el día del velorio, 50 sillas por ocho días, 125
+                sillas el día del último día.
+              </li>
+              <li>100 recordatorios.</li>
+              <li>
+                Minibús de 15 personas para traslado de familiares al
+                cementerio.
+              </li>
+              <li>
+                Nota: si requieren un servicio adicional, se le hará un
+                descuento especial (lápida, alquiler de planta eléctrica, entre
+                otros).
+              </li>
+            </ul>
+
+            <p class="MyEspecial">Inscripción: R.D. $700</p>
+            <p class="MyEspecial">Mensualidad: R.D. $400</p>
+            <button
+              value="familiar Tranquilidad"
+              id="MyButtonAdquirir"
+              class="MyButtonAdquirir"
+            >
+              ADQUIRIR!
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="MyFooter">
+      <div class="MyCopy">
+        <div class="MyRedes">
+          <div class="ContentMyRedesIcons">
+            <a
+              href="https://www.facebook.com/profile.php?id=100074271257651"
+              target="_blank"
+              ><img src="../img/Facelogo.png" alt="logo de facebook"
+            /></a>
+            <a
+              href="https://www.instagram.com/loguzplanesfunerarios/"
+              target="_blank"
+              ><img src="../img/instalogo.png" alt="logo de instagram"
+            /></a>
+            <a href="mailto:Loguzfuneraria@gmail.com"
+              ><img src="../img/gmail.png" alt="Igmail Logo"
+            /></a>
+            <div class="ImageTextRedes">
+              <img src="../img/telefono.png" alt="" /> 829-377-4584 /
+              849-631-1689
+            </div>
+          </div>
+          <p>&copy; Todos los derechos reservados</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../scrips/index.js"></script>
   </body>
 </html>
