@@ -646,12 +646,68 @@ a:hover::after {
 }
 /* Plan seccions */
 
-.MyNamePlan {
-  color: var(--boston-500);
-  text-align: center;
-  margin: 10px;
-  transition: all 0.3s ease-in-out;
+.MySectionPlanes {
+  background-color: var(--boston-200);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
+
+.MyPlanInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 90vw;
+  height: max-content;
+
+  .MyNamePlan {
+    margin: 10px;
+    font-size: 30px;
+  }
+
+  .MyPlan {
+    ul {
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: start;
+      gap: 20px;
+    }
+
+    li {
+      color: var(--boston-400);
+      list-style: none;
+      width: calc(
+        33.33% - 20px
+      ); /* Ajusta el ancho para que tres elementos quepan en una fila */
+    }
+
+    .MyEspecial {
+      color: var(--boston-500);
+      font-size: 25px;
+    }
+  }
+}
+
+.logoPlan {
+  margin: auto;
+  height: 200px;
+  width: 90vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+/* plan secction */
+
 .MyButtonAdquirir {
   padding: 10px;
   border: none;
@@ -661,6 +717,7 @@ a:hover::after {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+
 .MyButtonAdquirir:hover {
   background-color: var(--boston-500);
   translate: 0px -5px;
@@ -684,7 +741,7 @@ a:hover::after {
   .MyPlanInfo {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     width: 90vw;
     height: min-content;
@@ -707,18 +764,19 @@ a:hover::after {
         li {
           color: var(--boston-400);
           list-style: none;
+          width: 100%;
         }
-        .MyEspecial {
-          color: var(--boston-500);
-          font-size: 17px;
-        }
+        
       }
+      .MyEspecial {
+          color: var(--boston-500);
+          font-size: 15px;
+        }
     }
   }
 
   .logoPlan {
     margin: auto;
-    background-image: url(../img/PlanSatisfaccion.jpg);
     height: 200px;
     width: 90vw;
     background-size: cover;
@@ -811,6 +869,7 @@ a:hover::after {
     flex-direction: column; /* Ajusta elementos en columna */
     align-items: center;
   }
+
   .Galeria {
     flex-wrap: wrap; /* Asegura que los elementos se ajusten */
   }
@@ -819,6 +878,7 @@ a:hover::after {
     width: calc(50% - 20px); /* Cada imagen ocupa el 50% menos el gap */
     height: auto; /* Permite que se ajusten proporcionalmente */
   }
+
   .MyMain .MySection .MyInfo {
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
