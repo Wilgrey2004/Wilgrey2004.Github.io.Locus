@@ -122,6 +122,8 @@
       margin: 10px;
 
       .MySubmenu {
+        /* hace que la parte de abajo se vea por encima de cualquier cosa en la pagina */
+        z-index: 1000;
         display: none;
         position: absolute;
         width: max-content;
