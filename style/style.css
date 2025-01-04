@@ -725,6 +725,14 @@ a:hover::after {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.MyAbaut {
+  margin: auto;
+  width: 90vw;
+  height: max-content;
+  font-size: 25px;
+  color: var(--boston-600);
+}
+
 @media screen and (max-width: 1089px) {
   /* Planes seccions */
   .MySectionPlanes {
@@ -766,12 +774,11 @@ a:hover::after {
           list-style: none;
           width: 100%;
         }
-        
       }
       .MyEspecial {
-          color: var(--boston-500);
-          font-size: 15px;
-        }
+        color: var(--boston-500);
+        font-size: 15px;
+      }
     }
   }
 
@@ -786,6 +793,15 @@ a:hover::after {
     border-bottom-right-radius: 20px;
   }
   /* plan secction */
+
+  .MyAbaut {
+    margin: auto;
+    width: 90vw;
+    height: max-content;
+    font-size: 20px;
+    color: var(--boston-600);
+  }
+
   .MenuShow {
     display: block;
     transition: all 0.3s ease-in-out;
@@ -845,7 +861,7 @@ a:hover::after {
   }
 
   .MyFooter .MyRedes {
-    flex-direction: row;
+    flex-grow: column wrap;
     gap: 10px;
   }
 
