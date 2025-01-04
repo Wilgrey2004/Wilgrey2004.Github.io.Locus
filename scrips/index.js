@@ -36,3 +36,4 @@ btnPLanesAccion.addEventListener("click", () => {
   window.location.href = `https://wa.me/18293774584?text=${mensaje}`;
   console.log(ValorOfBtn);
 });
+

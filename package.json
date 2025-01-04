@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "gh-pages": "^6.3.0",
-    "logus": "file:"
+    "logus": "file:",
+    "sitemap": "^8.0.0"
   }
 }
